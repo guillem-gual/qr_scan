@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_scan/providers/db_provider.dart';
 import 'package:qr_scan/providers/ui_provider.dart';
 import 'package:qr_scan/screens/screens.dart';
 import 'package:qr_scan/widgets/widgets.dart';
@@ -35,6 +36,9 @@ class _HomeScreenBody extends StatelessWidget {
     final uiProvider = Provider.of<UiProvider>(context);
     // Canviar per a anar canviant entre pantalles
     final currentIndex = uiProvider.selectedMenuOpt;
+
+    // Creacio temporal de la base de dades
+    DBProvider.db.database;
 
     switch (currentIndex) {
       case 0:
